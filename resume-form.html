@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATS Resume Maker</title>
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+
+  <div class="main-layout">
+    <div class="form-section">
+      <form id="resumeForm">
+        <h2>Resume Form</h2>
+        <label>Full Name: <input type="text" id="fullName" required /></label>
+        <label>Job Title: <input type="text" id="jobTitle" required /></label>
+
+        <h3>Contact Information</h3>
+        <label>Email: <input type="email" id="email" required /></label>
+        <label>Phone: <input type="text" id="phone" required /></label>
+
+        <h3>Social Media & Links</h3>
+        <label>LinkedIn: <input type="url" id="linkedin" placeholder="https://linkedin.com/in/username" /></label>
+        <label>GitHub: <input type="url" id="github" placeholder="https://github.com/username" /></label>
+        <label>Portfolio/Website: <input type="url" id="website" placeholder="https://yourwebsite.com" /></label>
+        <label>Twitter/X: <input type="url" id="twitter" placeholder="https://twitter.com/username" /></label>
+        <label>Medium: <input type="url" id="medium" placeholder="https://medium.com/@username" /></label>
+
+        <h3>Experience</h3>
+        <div class="experience-group">
+          <label>Start Date: <input type="date" class="exp-start-date" /></label>
+          <label>End Date: <input type="date" class="exp-end-date" /></label>
+          <label>Position & Company: <input type="text" class="exp-position" /></label>
+          <label>Description: <textarea class="exp-description"></textarea></label>
+        </div>
+        <button type="button" id="addExperience">Add Experience</button>
+
+        <h3>Projects</h3>
+        <div class="project-group">
+          <label>Project Name: <input type="text" class="project-name" /></label>
+          <label>Duration: <input type="text" class="project-duration" /></label>
+          <label>Description: <textarea class="project-description"></textarea></label>
+          <label>Technologies Used: <input type="text" class="project-tech" /></label>
+          <label>Project URL: <input type="url" class="project-url" placeholder="https://project-link.com" /></label>
+        </div>
+        <button type="button" id="addProject">Add Project</button>
+
+        <h3>Education</h3>
+        <label>Start Date: <input type="date" id="eduStartDate" /></label>
+        <label>End Date: <input type="date" id="eduEndDate" /></label>
+        <label>Degree & Institution: <input type="text" id="eduDetails" /></label>
+
+        <h3>Skills (comma-separated)</h3>
+        <input type="text" id="skills" />
+
+        <button type="submit">Generate Resume</button>
+      </form>
+    </div>
+
+    <div class="resume-section">
+      <div id="resume-preview" class="a4-preview"></div>
+      <button id="downloadBtn" style="display: none;">Download PDF</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="resume.js"></script>
+</body>
+</html>

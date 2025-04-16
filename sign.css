@@ -32,6 +32,7 @@ body {
   background: #fff;
   z-index: 100;
   padding: 1rem 2rem;
+  height:150px;
   box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
   position: fixed;
   top: 0;
@@ -39,7 +40,7 @@ body {
 }
 
 .header .logo img {
-  height: 6rem;
+  height: 17rem;
 }
 
 .header nav ul {
@@ -56,7 +57,7 @@ body {
 }
 
 .header nav ul li a {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #666;
   text-decoration: none;
 }
